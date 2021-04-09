@@ -1,0 +1,237 @@
+footer {
+    background-color: rgb(31, 29, 29);
+    height: 200px;
+    color: rgba(255, 255, 255, .8);
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.profilo{
+    height: 6em;
+    border-radius: 50%;
+}
+
+body{
+    margin: 0;
+    font-size: 16px;
+    background-color: rgb(186, 213, 224);
+
+}
+
+header{
+    background-image: url("Piscina2.jpg");
+    background-size: cover;
+    height: 100px;
+    
+}
+
+ header div{
+    color: white;
+    font-size: 4em;
+    font-style: italic;
+    font-weight: bold;
+}
+
+#menu{
+    background-color: rgba(37, 37, 201);
+    height: 64px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    color: whitesmoke;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    
+}
+
+ nav a{
+    border: 2px solid black;
+    border-radius: 25px;
+    padding: 10px 15px;
+   
+}
+
+a:hover {
+    background-color: white;
+    color: black;
+  }
+
+#overlay{
+    background-color: rgba(0,0,0,0.3);
+    width: 100%;
+    height: 100%;
+   
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+
+section{
+    text-align: center;
+    display: flexbox;
+    justify-content: space-evenly;
+    align-items: center;
+    font-style: oblique;
+    padding: 120px 10px;
+    padding-bottom: 15px;
+}
+
+.pos{
+    position: fixed;
+    width: 100%;
+    top: 0;
+}
+
+
+section  h1{
+    font-size: 3em;
+    font-family: 'Averia Serif Libre', cursive;
+}
+section  img{
+    width:47%;
+    border: 2px solid black;
+    border-radius: 10px;
+}
+.preferito{
+    height: 20px;
+    width: 80px;
+    background-color: green;
+}
+
+.removepreferito{
+    height: 20px;
+    width: 80px;
+    background-color: red;
+}
+section div{
+    padding: 10px;
+    
+}
+div input{
+    margin-top: 40px;
+}
+#barradiricerca{
+    display: flex;
+    flex-direction: column;
+    justify-content: right;
+    
+}
+
+#preferiti{
+    border-top: 2px solid black;
+    display: none;
+    flex-direction: column;
+    justify-content: right;
+}
+.hidden{
+    display: none;
+    border-top: 2px solid black;
+    justify-content: center;
+    align-items: center;
+}
+.size{
+   height: 400px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    
+}
+div p{
+    margin: 10px 25px;
+    font-size: 1.5em;
+    line-height: 25px;
+
+}
+.argument{
+    border-top: 2px solid black;
+}
+section a{
+    background-color: white;
+    font-weight: bold;
+    border: 2px solid black;
+    border-radius: 30px;
+    margin: 5px 15px;
+}
+section a:hover{
+    background-color: black;
+    color: white;
+}
+.bold{
+    font-weight: bold;
+}
+
+section#article p{
+    font-style: normal;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.dettagli{
+    display: block;
+ 
+}
+.dettaglinascosti{
+    display: none;
+}
+.center{
+    height: 47%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.bottoni{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-style: normal;
+}
+
+#menuacomparsa{
+    display: none;
+   
+}
+div#menuacomparsa div{
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 5px 0;
+}
+@media(max-width: 800px){
+   #overlay{
+       justify-content: space-around;
+   }
+   #menuacomparsa{
+       display: block;
+   }
+   
+   body section{
+       margin: 10px;
+   }
+
+    #menu{
+        display: none;
+    }
+   
+    
+    section h1{
+        font-size: 2em;
+    }
+    .size{
+        height: 34%;
+        display: flex;
+        flex-direction: row;
+        
+    }
+    .center{
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+    }
+
+    section .center img{
+        width: 100%;
+    }
+    section{
+       position: static;
+    }
+    
+}
