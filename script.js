@@ -2,9 +2,68 @@ const sezioneArgument = document.querySelector(".argument");
 
 
 function inizializza(){
-    const section = document.querySelector("section");
-    
-    const firsth1 = document.createElement("h1");
+    const div = [];
+
+    console.log(titolo[0]);
+
+    for(let i = 0; i < 2; i++){
+        div[i] = document.createElement("div");
+        div[i].classList.add("sezione");
+        const titoloh1 = document.createElement("h1");
+        titoloh1.appendChild(document.createTextNode(titolo[i]));
+        div[i].appendChild(titoloh1);
+
+        const divPreferiti = document.createElement("div");
+        divPreferiti.classList.add("preferito");
+        divPreferiti.appendChild(document.createTextNode("Preferiti"));
+        div[i].appendChild(divPreferiti);
+        if(i === 0){
+            const divImg = document.createElement("div");
+            divImg.classList.add("size");
+            const immagine = [];
+            for(let j = 0; j < 2; j++){
+                immagine[j] = document.createElement("img");
+                immagine[j].src = immagini[j];
+                divImg.appendChild(immagine[j]);
+            }
+            div[i].appendChild(divImg);
+            const parag = document.createElement("div");
+            const paragNascos = document.createElement("p");
+            paragNascos.innerHTML = paragrafi[i];
+            paragNascos.classList.add("dettaglinascosti");
+            parag.appendChild(paragNascos);
+            const paragNotNascos = document.createElement("p");
+            paragNotNascos.classList.add("dettagli");
+            paragNotNascos.innerHTML = "Mostra dettagli";
+            parag.appendChild(paragNotNascos);
+            div[i].appendChild(parag);
+            
+        }else{
+            const divCenter = document.createElement("div");
+            divCenter.classList.add("center");
+            const divImgLast = document.createElement("img");
+            divImgLast.src = immagini[2];
+            divCenter.appendChild(divImgLast);
+            div[i].appendChild(divCenter);
+
+            const paragNascos = document.createElement("p");
+            paragNascos.innerHTML = paragrafi[i];
+            paragNascos.classList.add("dettaglinascosti");
+            divCenter.appendChild(paragNascos);
+
+            const paragNotNascos = document.createElement("p");
+            paragNotNascos.classList.add("dettagli");
+            paragNotNascos.innerHTML = "Mostra dettagli";
+            divCenter.appendChild(paragNotNascos);
+
+            div[i].appendChild(divCenter);
+        }
+        sezioneArgument.appendChild(div[i]);
+        console.log("Elementi caricati");
+    }
+
+    //all'inizio era così, poi l'ho riscritto. 
+  /*  const firsth1 = document.createElement("h1");
     firsth1.appendChild(document.createTextNode(titolo[0]));   
     const divPreferito1 = document.createElement("div");
     divPreferito1.classList.add("preferito");
@@ -63,7 +122,7 @@ function inizializza(){
     divCenter.appendChild(mostraDettagli2);
     
     secondsection.appendChild(divCenter);
-    sezioneArgument.appendChild(secondsection);  
+    sezioneArgument.appendChild(secondsection);  */
 }
 inizializza();
 
